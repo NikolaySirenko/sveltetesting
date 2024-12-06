@@ -25,6 +25,6 @@ npx playwright test
 ```
 
 ## Adjustung
-Use the ```playwright.config.js``` or ```ite.config.js``` to adjust the testing libraries to your needs. 
+Use the ```playwright.config.js``` or ```vite.config.js``` to adjust the testing libraries to your needs. 
 
 Happy coding!
