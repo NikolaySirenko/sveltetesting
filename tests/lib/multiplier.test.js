@@ -11,6 +11,6 @@ test('Show product of two numbers', () => {
     expect(multiply(-2, -2)).toBe(4);
 
     // This test will fail
-    expect(multiply(2, 2)).toBe(5);
+    // expect(multiply(2, 2)).toBe(5);
     
 })
