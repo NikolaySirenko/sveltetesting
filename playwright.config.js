@@ -1,3 +1,4 @@
+/* v8 ignore next 99999 */
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
 

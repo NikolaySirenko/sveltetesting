@@ -1,5 +1,11 @@
 # A barebone Svelte project that shows testing functionality.
 
+## Coverage Report
+
+```
+http://localhost:10000/coverage/
+```
+
 ## Unit tests
 
 Unit tests are implemented using vitest. All tests are placed in the \tests\ folder.
@@ -14,7 +20,7 @@ npx vitest ./tests/
 
 ## End-to-end tests
 
-End-to-end testing is implemented with playwright. It requires your app running in different browsers. 
+End-to-end testing is implemented with playwright. It requires your app running in different browsers.
 
 ```bash
 # To run the end-to-end test:
@@ -25,6 +31,7 @@ npx playwright test
 ```
 
 ## Adjustung
-Use the ```playwright.config.js``` or ```vite.config.js``` to adjust the testing libraries to your needs. 
+
+Use the ``playwright.config.js`` or ``vite.config.js`` to adjust the testing libraries to your needs.
 
 Happy coding!

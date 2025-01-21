@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest';
-import multiply from '$lib/militplier';
+import multiply from '../../src/lib/militplier';
 
 test('Show product of two numbers', () => {
     expect(multiply(2, 2)).toBe(4);
