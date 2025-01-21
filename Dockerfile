@@ -11,6 +11,6 @@ RUN npm run unittests
 
 RUN npm run build
 
-EXPOSE 10000 10000
+EXPOSE 10000
 
-RUN npm run preview
+CMD ["npm", "run", "preview"]
