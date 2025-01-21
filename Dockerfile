@@ -13,6 +13,8 @@ RUN npm run check
 
 RUN npm run lint
 
+RUN npm run coverage
+
 RUN npm run build
 
 EXPOSE 10000
