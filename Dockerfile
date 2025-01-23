@@ -13,4 +13,4 @@ RUN npm run build
 
 EXPOSE 10000
 
-CMD ["npm", "run", "preview"]
+# CMD ["npm", "run", "preview"]
