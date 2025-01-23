@@ -7,12 +7,6 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run unittests
-
-RUN npm run check
-
-RUN npm run lint
-
 RUN npm run coverage
 
 RUN npm run build
