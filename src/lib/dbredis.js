@@ -1,5 +1,6 @@
 import { createClient } from 'redis';
-import { env }from '$env/dynamic/private'
+import { env } from '$env/dynamic/private';
+import { building } from '$app/environment';
 
 
 export const client = createClient({
@@ -8,4 +9,4 @@ export const client = createClient({
 
 client.on('error', err => console.log('Redis Client Error', err));
 
-await client.connect();
+if (!building) await client.connect();
