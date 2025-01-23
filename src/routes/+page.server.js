@@ -1,5 +1,7 @@
 import { client } from '../lib/dbredis.js';
 
+export const prerender = false;
+
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
     let counter = await client.get('counter');

@@ -2,9 +2,6 @@ name: Docker Tests
 
 on: [push, pull_request]
 
-env:
-  env_var: ${{ vars.REDIS_URL }}
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,4 +14,13 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Build Docker image
-      run: docker build --build-arg REDIS_URL=${{ vars.REDIS_URL }} -t my-app .
+      run: docker build -t my-app .
+
+    - name: Run unit tests
+      run: docker run my-app npm run unittests
+
+    - name: Run check
+      run: docker run my-app npm run check
+
+    - name: Run lint
+      run: docker run my-app npm run lint
