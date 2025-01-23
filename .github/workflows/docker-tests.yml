@@ -2,6 +2,9 @@ name: Docker Tests
 
 on: [push, pull_request]
 
+env:
+  env_var: ${{ vars.REDIS_URL }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
