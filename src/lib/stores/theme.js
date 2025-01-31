@@ -1,16 +1,14 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-// Get initial theme from localStorage or default to 'light'
-const initialTheme = browser ? localStorage.getItem('theme') || 'light' : 'light';
+const defaultTheme = 'light';
+const initialTheme = browser ? localStorage.getItem('theme') ?? defaultTheme : defaultTheme;
 
-// Create the theme store
 export const theme = writable(initialTheme);
 
-// Subscribe to theme changes and update localStorage
-if (browser) {
-    theme.subscribe(value => {
+theme.subscribe((value) => {
+    if (browser) {
         localStorage.setItem('theme', value);
         document.documentElement.setAttribute('data-theme', value);
-    });
-}
+    }
+});
