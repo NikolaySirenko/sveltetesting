@@ -9,15 +9,24 @@
 				--bg-color: #ffffff;
 				--text-color: #333333;
 				--button-bg: #e0e0e0;
+				--link-color: #0066cc;
 			}
 			:root[data-theme="dark"] {
 				--bg-color: #1a1a1a;
 				--text-color: #ffffff;
 				--button-bg: #404040;
+				--link-color: #66b3ff;
 			}
 			body {
 				background-color: var(--bg-color);
 				color: var(--text-color);
+			}
+			a {
+				color: var(--link-color);
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 		</style>
 		<script>
