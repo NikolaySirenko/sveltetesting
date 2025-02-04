@@ -1,51 +1,34 @@
 <script>
     import Navbar from '$lib/components/Navbar.svelte';
-    import { theme } from '$lib/stores/theme';
-    
-    function toggleTheme() {
-        theme.update(current => current === 'light' ? 'dark' : 'light');
-    }
 </script>
 
-<div class={$theme}>
-    <Navbar />
-    <main>
-        <slot />
-    </main>
-    <button class="theme-toggle" on:click={toggleTheme}>
-        {$theme === 'light' ? '🌙' : '☀️'}
-    </button>
-</div>
+<Navbar />
+
+<main>
+    <slot />
+</main>
+
 
 <style>
-    .light {
-        background-color: #ffffff;
-        color: #1a1a1a;
-        min-height: 100vh;
+    :global(body) {
+        margin: 0;
+        padding: 20px;
+        transition: background-color 0.3s, color 0.3s;
+        font-family:
+            -apple-system, 
+            BlinkMacSystemFont, 
+            Segoe UI, 
+            Roboto, 
+            Oxygen, 
+            Ubuntu, 
+            Cantarell,
+            Fira Sans, 
+            Droid Sans, 
+            Helvetica Neue, 
+            sans-serif;
     }
-
-    .dark {
-        background-color: #1a1a1a;
-        color: #ffffff;
-        min-height: 100vh;
-    }
-
     main {
-        padding: 2rem;
         max-width: 1200px;
         margin: 0 auto;
     }
-
-    .theme-toggle {
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.5rem;
-        border-radius: 50%;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        font-size: 1.5rem;
-    }
-
 </style>

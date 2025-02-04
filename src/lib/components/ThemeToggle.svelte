@@ -6,8 +6,8 @@
     }
 </script>
 
-<button on:click={toggleTheme} style="padding: 8px; border-radius: 4px; background: var(--button-bg);">
-    {$theme === 'light' ? '🌙' : '☀️'}
+<button on:click={toggleTheme} style="padding: 8px; border-radius: 4px; background: #404040;">
+    {$theme === 'dark' ? '🌙' : '☀️'}
 </button>
 
 <style>
